@@ -1,0 +1,11 @@
+{
+  "LAYOUT": {
+    "LABEL": {
+      "LANG": "Language",
+      "MENU1": "Home",
+      "MENU2": "User Management",
+      "MENU2_SUB1": "Register User",
+      "MENU2_SUB2": "User Information"
+    }
+  }
+}

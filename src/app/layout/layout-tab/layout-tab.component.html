@@ -1,0 +1,150 @@
+<body (click)="onClickBody()" > <!--(scroll)="menuscroll()"-->
+  <div class="subWrap01">
+    <!--HEADER-->
+    <div class="heheaderader">
+       <!-- personal & utility -->
+      <div class="personalWrap">
+        <!--User-->
+        <div class="userWrap">
+          <span class="user_logo">
+            <img  src="./assets/images/default-user-icon.jpg" alt="logo" />
+          </span>
+          <p class="wrap_company_name">
+            <span class="corp_name">HOEM SOMNANG</span>
+          </p>
+        </div>
+        <!--End User-->
+        <div class="utility">
+          <div class="btns">
+            <button class="btn_util_noti"  title="Notification"> <!--(click)="onOpenPage(119); clearSearchCondition()"-->
+              <span>Notification</span><em class="count"  style="background: #f31700">N</em>
+            </button>
+            <button class="btn_util_setting"  title="Setting"><span>Setting</span></button> <!--(click)="onOpenPage(120)"-->
+            <button class="btn_util_logout"  title="Logout"><span>Sign Out</span></button> <!--(click)="logout()"-->
+          </div>
+          <div class="change_lang ui_dropdown" [ngClass]="{ ui_drop_open: sltLanguageList }" (click)="$event.stopPropagation(); sltLanguageList = !sltLanguageList">
+            <div class="cur"  > <!--[ngClass]="langData[langCode].class"-->
+              <!-- add Class :: english:default, 中文 : china, 크메르어 : khmer -->
+              <strong>{{ 'LAYOUT.LABEL.LANG' | translate}}</strong> <!--{{ langData[langCode].text }}-->
+              <button type="button" tabindex="-1"><span>show language list</span></button>
+            </div>
+            <!-- language list -->
+            <div class="lang_list ui_drop_cont">
+              <ul>
+                <li class="" (click)="onChangeLanguage('en')"> <!---->
+                  <label class=""><input type="radio" tabindex="-1" value="en" name="lang" /><span>English</span></label>
+                </li>
+                <li class="" (click)="onChangeLanguage('kh')"> <!---->
+                  <label class=""><input type="radio" tabindex="-1" value="kh" name="lang" /><span>ខ្មែរ</span></label>
+                </li>
+              </ul>
+            </div>
+            <!-- //language list -->
+          </div>
+            <!-- //language list -->
+          </div>
+        </div>
+        <!-- personal & utility -->
+      </div>
+      <!--END HEADERE-->
+
+       <!--START MENU-->
+       <div class="menuWrap" id="menufixed">
+        <div class="menubox">
+          <ul>
+            <!--START HOME MENU-->
+            <li>
+              <button>
+                <span>{{ 'LAYOUT.LABEL.MENU1' | translate }}</span>
+                <span class="txt_hover">{{ 'LAYOUT.LABEL.MENU1' | translate }}</span>
+              </button>
+            </li>
+            <!--END HOME MENU-->
+            <!--START USER MENU-->
+            <li>
+              <button>
+                <span>{{ 'LAYOUT.LABEL.MENU2' | translate }}</span>
+                <span class="txt_hover">{{ 'LAYOUT.LABEL.MENU2' | translate }}</span>
+              </button>
+              <ul>
+                <!--START REGISTER USER -->
+                <li > <!--*ngIf="userInfo.subIDYn === 'N' || menuRightData[1]?.menuUseRightTypeCode === '2'" [ngClass]="{ current: path == 'transfer' }"-->
+                  <button > <!--(click)="onOpenPage(102)"-->
+                    <span>{{ 'LAYOUT.LABEL.MENU2_SUB1' | translate }}</span>
+                  </button>
+                </li>
+                <!--END REGISTER USER-->
+                <!--START  USER INFORMATION -->
+                <li > <!--*ngIf="userInfo.subIDYn === 'N' || menuRightData[1]?.menuUseRightTypeCode === '2'" [ngClass]="{ current: path == 'transfer' }"-->
+                  <button > <!--(click)="onOpenPage(102)"-->
+                    <span>{{ 'LAYOUT.LABEL.MENU2_SUB2' | translate }}</span>
+                  </button>
+                </li>
+                <!--END  USER INFORMATION -->
+              </ul>
+            </li>
+            <!--END USER MENU-->
+          </ul>
+        </div>
+       </div>
+       <!--END MENU-->
+
+       <!---START CONTNETS AREAS-->
+    <div class="contentsWrap">
+      <router-outlet></router-outlet>
+    </div>
+    <!---END ONTNETS AREAS-->
+
+    <!--START FOOTER-->
+    <div class="footer">
+      <div class="foot_policy">
+        <button >
+          <h1 class="logo"><span>LOGO</span></h1>
+        </button>
+         <!--MENU-->
+          <ul class="footmenu_list">
+            <li>
+              <button >
+                <span>NEWS</span>
+              </button>
+            </li>
+            <li>
+              <button >
+                <span>NEWS</span>
+              </button>
+            </li>
+            <li>
+              <button >
+                <span>NEWS</span>
+              </button>
+            </li>
+          </ul>
+      </div>
+      <div class="copyrightWrap">
+        <p>
+          <span>PHONE</span> <strong> 09946433 </strong>
+        </p>
+        <!-- Call center -->
+        <p class="copyright">
+          <span>Copyright © BANK. All right Reserved</span>
+        </p>
+       <!--  <div class="follow">
+          <button class="facebook" (click)="openPage( 'facebook' )">
+            <span>{{ 'LAYOUT.LABEL.FOOTER3' | translate }}</span>
+          </button>
+          Follow US
+          <kendo-dropdownlist [data]="bankNetworkList" [textField]="'text'" [valueField]="'value'" [(ngModel)]="bankNetwork" (valueChange)="onBankSelect(bankNetwork)" style="margin-top: -6px">
+            <ng-template kendoDropDownListValueTemplate let-dataItem>
+              <span class="template" *ngIf="!!dataItem">{{ dataItem.text | translate }}</span>
+            </ng-template>
+            <ng-template kendoDropDownListItemTemplate let-dataItem>
+              <span class="template" *ngIf="!!dataItem">{{ dataItem.text | translate }}</span>
+            </ng-template>
+          </kendo-dropdownlist>
+        </div> -->
+      </div>
+    </div>
+    <!--END FOOTER-->
+ <button class="btn_top" (click)="onScrollTop()">move top</button>
+</div>
+</body>

@@ -1,0 +1,260 @@
+/* You can add global styles to this file, and also import other style files */
+@charset "UTF-8";
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+/* @import url('https://fonts.googleapis.com/css?family=Noto+Sans:300,400,500,700'); */
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700");
+
+
+/* Noto Sans font */
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Noto Sans"), local("Noto-Sans-Light"), url("assets/font/NotoSans-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Noto Sans"), local("Noto-Sans-Regular"), url("assets/font/NotoSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Noto Sans Khmer"), local("Noto-Sans-Medium"), url("assets/font/NotoSans-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Noto Sans"), local("Noto-Sans-Bold"), url("assets/font/NotoSans-Bold.ttf") format("truetype");
+}
+
+
+/* Noto SansCJKtc font */
+@font-face {
+  font-family: "Noto Sans CJK TC";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Noto Sans CJKtc"), local("Noto-SansCJKtc-Light"), url("assets/font/NotoSansCJKtc-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Noto Sans CJK TC";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Noto Sans CJKtc"), local("Noto-SansCJKtc-Regular"), url("assets/font/NotoSansCJKtc-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Noto Sans CJK TC";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Noto Sans Khmer CJKtc"), local("Noto-SansCJKtc-Medium"), url("assets/font/NotoSansCJKtc-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Noto Sans CJK TC";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Noto Sans CJKtc"), local("Noto-SansCJKtc-Bold"), url("assets/font/NotoSansCJKtc-Bold.ttf") format("truetype");
+}
+
+
+/* Noto Khmer font */
+@font-face {
+  font-family: "Noto Sans Khmer";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Noto Sans Khmer"), local("Noto-SansKhmer-Light"), url("assets/font/NotoSansKhmer-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Noto Sans Khmer";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Noto Sans Khmer"), local("Noto-SansKhmer-Regular"), url("assets/font/NotoSansKhmer-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Noto Sans Khmer";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Noto Sans Khmer Bold"), local("Noto-SansKhmer-Medium"), url("assets/font/NotoSansKhmer-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Noto Sans Khmer";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Noto Sans Khmer Bold"), local("Noto-SansKhmer-Bold"), url("assets/font/NotoSansKhmer-Bold.ttf") format("truetype");
+}
+
+
+/***************************************************************************************************
+	Reset
+***************************************************************************************************/
+
+html, body {height:100%; min-height:500px; margin:0; padding:0; -webkit-text-size-adjust:none;}
+html {font:normal 16px 'Noto Sans', 'Noto Sans Khmer', 'Verdana', 'Geneva', 'Tahoma', 'sans-serif';}
+body {min-height:100%; color:#000; letter-spacing:-.05em; background:#f3f6fa; word-wrap:normal; word-break:keep-all;}
+body::-webkit-scrollbar { width: 0.25rem; }
+body::-webkit-scrollbar-track { background: #f3f6fa; }
+body::-webkit-scrollbar-thumb { background: #6649b8; }
+img {border:none;}
+p, ul, li, ol, h1, h2, h3, h4, h5, h6, dl, dt, dd, em, figure {margin:0; padding:0;}
+h1, h2, h3, h4, h5, h6 {font-weight:900; font-size:1em;}
+li {list-style:none;}
+fieldset {margin:0; padding:0; border:none;}
+legend {position:absolute; left:-1000px; top:-1000px; height:0; font-size:0; line-height:0; visibility:hidden;}
+a {margin:0; color:#000; text-decoration:none; outline:none; cursor:pointer;}
+table {width:100%; border-collapse:collapse; font-size:1em;}
+table caption {display:none;position:absolute; left:-999px; height:0; font-size:0; line-height:0; visibility:hidden; overflow:hidden;}
+table td, table th {padding:0;}
+button {margin:0; padding:0; font:normal 1em 'Noto Sans', 'Noto Sans Khmer', 'Verdana', 'Geneva', 'Tahoma', 'sans-serif'; color:#000; vertical-align:middle; background:0; border:none; overflow:visible; cursor:pointer;}
+button:focus {outline:none; -webkit-tap-highlight-color:rgba(0,0,0,0.2);}
+input[type=text], input[type=password], input[type=number], input[type=tel], input[type=rang], input[type=email], input[type=url], input[type=date], input[type=datetime], input[type=month], input[type=tel], input[type=search], input[type=color], input[type=file],
+.k-textbox {
+	display:inline-block; height:40px; margin:0; padding:3px 12px; font-weight:normal; font-size:1rem; font-family:'Noto Sans', 'Noto Sans Khmer', 'Verdana', 'Geneva', 'Tahoma', 'sans-serif'; color:#000; vertical-align:middle;
+	background:#eff2f5; border:none; border-radius:4px; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; -webkit-appearance:none; -moz-appearance:none; -o-appearance:none; appearance:none;
+}
+
+/**********LAYOUT**********/
+.subWrap01 {position:relative; min-width:1270px; min-height:100%; padding-bottom:148px; background:#f3f6fa;}
+.subWrap01 .header {position:relative; padding:20px 15px 0; z-index:200;}
+.personalWrap {position:relative; height:70px; padding-right:520px;}
+.userWrap > * {display:inline-block; vertical-align:middle;}
+.user_logo {width:50px; height:50px; margin-right:12px; text-align:center; border-radius:50%; overflow:hidden;}
+.user_logo img {height:50px;}
+.userWrap .name {font-size:1.625rem; color:#18191b;}
+.userWrap .corp_name {margin-left:5px; font-size:.875rem; color:#696f79; vertical-align:sub;}
+.utility {position:absolute; right:0; top:11px;}
+.utility:after {content:""; display:block; clear:both; width:0; height:0;}
+.utility > * {float:left; height:28px; border-left:1px solid #e4e7ed;}
+.utility a, .utility button {min-width:40px; height:28px; text-indent:-9999em;}
+.utility .btns {padding: 0 10px;}
+.utility .btns a, .utility .btns button {display:inline-block; margin-left:-4px;} .btn_util_noti {position:relative; width:47px; background:url("assets/images/ico_noti.png") no-repeat center center;}
+.btn_util_noti .count {position:absolute; left:50%; top:3px; margin-left:3px; text-indent:0; height:12px; padding:0 5px; font-weight:bold; font-size:.625em; color:#fff; text-align:center; line-height:12px; background:#7a6d5c; border-radius:6px;}
+.btn_util_setting {width:50px; background:url("assets/images/ico_setting.png") no-repeat center center;}
+.btn_util_logout {width:40px; background:url("assets/images/ico_logout.png") no-repeat center center;}
+
+/***********LANGUAGE*********/
+.change_lang {position:relative; padding:0 19px 0 21px;}
+.ui_dropdown.change_lang .cur {position:relative; min-width:76px; height:auto; padding:0 26px 0 0; font-size:.875rem; color:#18191b; line-height:28px; letter-spacing:-.05em; background:none;}
+/*.change_lang .cur:before {content:""; position:absolute; left:0; top:50%; width:22px; height:20px; margin-top:-10px; background:url("assets/images/ico_lang_flag_eng.png") no-repeat left center;}*/
+.change_lang .cur:after {content:""; position:absolute; right:0; top:50%; width:10px; height:10px; margin-top:-5px; background:url("assets/images/ico_lang_arrow.png") no-repeat right center; transition:all .3s linear;}
+.change_lang .cur button {position:absolute; left:0; top:0; width:100%; height:100%; text-indent:-999em; opacity:0; z-index:2;}
+/*.change_lang .eng:before {background-image:url("assets/images/ico_lang_flag_eng.png");}
+.change_lang .china:before {background-image:url("assets/images/ico_lang_flag_china.png");}
+.change_lang .khmer:before {background-image:url("assets/images/ico_lang_flag_khmer.png");}*/
+.lang_list {position:absolute; left:9px; top:28px; min-width:100px; height:0; padding:0 12px; background:#fff; box-shadow:0 3px 4px rgba(111,115,120,.57); overflow:hidden; opacity:0; transition:opacity .3s linear;}
+.change_lang.ui_drop_open .cur:after {-webkit-transform:rotate(180deg); -moz-transform:rotate(180deg); -ms-transform:rotate(180deg); transform:rotate(180deg);}
+.change_lang.ui_drop_open .lang_list {min-width:100px; height:auto; padding:8px 12px; opacity:1; z-index:500;}
+.lang_list li {position:relative; padding:4px 0; font-weight:bold; font-size:.875rem; color:#18191b;}
+.lang_list li:before {content:""; position:absolute; left:0; top:50%; width:22px; height:20px; margin-top:-10px; background-repeat:no-repeat; background-position:left center;}
+/*.lang_list label {display:block; padding-left:22px; cursor:pointer;}*/
+.lang_list label {display:block; padding-left:0; cursor:pointer;}
+.lang_list label input {position:absolute; opacity:0;}
+.lang_list label input + * {opacity:1;}
+.lang_list label input + *:before {display:none;}
+
+/***** layer Drop/Down open UI *****/
+.ui_dropdown {position:relative;}
+.ui_dropdown .cur {position:relative; height:40px; padding:5px 40px 5px 12px; color:#000; line-height:30px; background:#eff2f5; border-radius:4px;}
+.ui_dropdown .btn_detail:before {content:""; position:absolute; -webkit-transition:all .2s linear; -moz-transition:all .2s linear; -ms-transition:all .2s linear; transition:all .2s linear;}
+.ui_dropdown .cur button:before {content:""; position:absolute; right:0; top:0; width:50px; height:100%; background:url("assets/images/ico_down02.png") no-repeat center center;
+	-webkit-transition:all .2s linear; -moz-transition:all .2s linear; -ms-transition:all .2s linear; transition:all .2s linear;
+}
+.ui_dropdown .ui_drop_cont {position:absolute; height:0; background:#fff; opacity:0; box-shadow:0 3px 4px rgba(111,115,120,.57); overflow:hidden; opacity:0; -webkit-transition:opacity .2s linear; -moz-transition:opacity .2s linear; -ms-transition:opacity .2s linear; transition:opacity .2s linear;}
+.ui_drop_open .ui_drop_cont {min-width:100%; height:auto; max-height:200px; padding:8px 12px; overflow:auto; opacity:1; z-index:100;}
+.ui_dropdown .ui_drop_cont .data_txt > span:before {background:#83878f;}
+.ui_dropdown .ui_drop_cont .choice .data_txt > span:before {background:#fff;}
+.ui_drop_open .btn_detail:before {-webkit-transform:rotate(180deg); -moz-transform:rotate(180deg); -ms-transform:rotate(180deg); transform:rotate(180deg);}
+.contset_box .ui_dropdown {display:block; }
+.contset_box .ui_dropdown .cur {height:39px; padding:5px 40px 5px 0; color:#fff; line-height:39px; background:none; border-bottom:1px solid #cac5be; border-radius:0;}
+.contset_box .data_txt > span {margin-left:27px;}
+.contset_box .data_txt > span:first-child {margin-left:0;}
+.contset_box .data_txt > span:before {left:-13px; background:#bdb6ae;}
+.contset_box .data_txt > span:empty:before {display:none;}
+.contset_box .cur .btn_detail:before {position:absolute; right:0; top:50%; width:13px; height:13px; margin-top:-6.5px; background:url("assets/images/ico_down03.png") no-repeat center center;}
+.contset_box .ui_drop_cont {min-width:100%;}
+.ui_drop_cont .chk_list {margin:0 -12px;}
+.ui_drop_cont .chk_list button {width:100%; height:30px; padding:0 12px; font-size:.875rem; color:#696f79; text-align:left;}
+.ui_drop_cont .chk_list .choice button {color:#fff; background:rgba(122,109,92,.7);}
+
+
+/*** top menu ***/
+.menuWrap {position:relative; height:56px; font-size:.75rem; color:#696f79; z-index:100;}
+.menuWrap .menubox {height:56px; padding-right:280px; background:#fff; border-radius:5px; box-shadow:0 3px 5px rgba(187,195,206,.57);}
+.menubox > ul, .menubox > ul > li {height:100%;}
+.menubox li a, .menubox li button {position:relative; color:#696f79; letter-spacing:-.01em;}
+.menubox .txt_hover {display:none; position:absolute; left:-7px; top:0; right:-7px; height:100%; font-weight:bold; letter-spacing:-.03em;}
+.menubox a:hover, .menubox button:hover {color:#7a6d5c;}
+.menubox ul, .menubox li, .menubox a, .menubox button {-webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; box-sizing:border-box;}
+.menubox > ul > li {position:relative; float:left; padding:0 15px;}
+.menubox > ul > li > *:first-child {display:block; height:100%; font-size:.875rem; line-height:56px;}
+.menubox .menu_open > *:first-child, .menubox > ul > li.current > button {font-weight:700; color:#7a6d5c;}
+.menubox > ul > li:hover ul, .menubox .menu_open ul {height:auto; padding:6px 12px; opacity:1;}
+.menubox > ul > li:hover:after, .menubox .menu_open:after, .menubox > ul > li.current:after {content:""; position:absolute; left:14px; bottom:0; right:14px; height:3px; background:#7a6d5c;}
+.menubox > ul > li:hover > a {position:relative;}
+.menubox > ul > li:hover:not(.current) .txt_hover {display:block; font-weight:700; color:#7a6d5c; text-align:center; background:#fff;}
+.menubox li ul {position:absolute; left:14px; top:100%; min-width:90%; min-width:calc(100% - 28px); height:0; padding:0 12px; background:#fff; box-shadow:0 3px 4px rgba(111,115,120,.57); overflow:hidden; opacity:0;}
+.menubox li ul a, .menubox li ul button {display:inline-block; padding:6px 0; white-space:nowrap;}
+.menubox li ul a:hover, .menubox li ul button:hover, .menubox li ul li.current button {color:#7a6d5c; text-decoration:underline;}
+.menubox .favorite {position:absolute; right:0; top:0; width:178px; height:100%;}
+.favorite .tit {height:28px; margin-top:15px; padding:0 35px 0 19px; font-size:.8125rem; color:#7a6d5c; line-height:28px; letter-spacing:-.05em; text-overflow:ellipsis; border-left:1px solid #eeeff1; white-space:nowrap; overflow:hidden;}
+.favorite .btn_detail:after {content:""; position:absolute; right:21px; top:50%; width:10px; height:10px; margin-top:-2px; background:url("assets/images/ico_lang_arrow.png") no-repeat right center; transition:all .2s linear;}
+.favorite .fav_list {position:absolute; right:0; top:100%; min-width:173px; height:0; background:#fff; box-shadow:0 3px 4px rgba(111,115,120,.57); overflow:hidden; opacity:0; transition:opacity .3s linear;}
+.favorite.ui_drop_open .btn_detail:after {-webkit-transform:rotate(180deg); -moz-transform:rotate(180deg); -ms-transform:rotate(180deg); transform:rotate(180deg);}
+.favorite.ui_drop_open .fav_list {width:100%; padding:0 12px; opacity:1; z-index:100;}
+.fav_list ul {padding:8px 0 4px; border-bottom:1px solid #eeeff1;}
+.fav_list li {position:relative; padding-right:15px;}
+.fav_list a, .fav_list button {display:block; padding:3px 0; font-size:.75rem; color:#696f79; letter-spacing:-1px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+.fav_list button:not(.btn_del01) {display:inline-block; width:100%; text-align:left;}
+.fav_list .btn_del01 {position:absolute; right:-5px; top:0; width:20px; height:100%;}
+.fav_list .fav_manage a, .fav_list .fav_manage button {height:42px; padding:0 20px 0 0; font-weight:500; color:#18191b; line-height:42px; background:url("assets/images/ico_rarrow01.png") no-repeat right center; white-space:nowrap;}
+/* top menu fixed */
+.menuWrap.fix .menubox {position:fixed; left:0; top:0; width:100%; min-width:1260px; padding-left:15px; padding-right:15px; border-radius:0; z-index:200;}
+.menuWrap.fix .menubox .favorite {right:15px;}
+
+
+/**********CONTENTS AREAS**********/
+.contentsWrap {padding:15px;}
+.contentsWrap .contentsWrap {padding:0;}
+iframe {display:block; /* vertical-align:top; */ border:none;}
+.cont_frame {width:100%; height:max-content; min-height:80vh;}
+.frameWrap > *:first-child {margin-top:0;}
+.frameWrap > .hide + .container01 {margin-top:0;}
+
+/**********FOOTER**********/
+.footer {position:absolute; left:0; right:0; bottom:0; height:148px; background:#fff;}
+.foot_policy {position:relative; height:70px; padding:15px 30px;}
+.footer .logo {float:left; width:120px; height:40px; text-indent:-999em; background:url("assets/images/user_logo.png") no-repeat left center;}
+.footmenu_list {position:absolute; left:50%; top:50%; -webkit-transform:translate(-50%, -50%); -moz-transform:translate(-50%, -50%); -ms-transform:translate(-50%, -50%); transform:translate(-50%, -50%); overflow:hidden;}
+.footmenu_list li {position:relative; float:left; font-size:.875rem;}
+.footmenu_list li:before {content:""; position:absolute; left:0; top:50%; width:1px; height:12px; margin-top:-6px; background:#dadada;}
+.footmenu_list li:first-child:before {display:none;}
+.footmenu_list a, .footmenu_list button {display:block; padding:5px 12px; color:#696f79;}
+
+/**********COPY**********/
+.copyrightWrap {position:relative; height:78px; padding:20px 30px 0; font-size:.875rem; line-height:1; border-top:1px solid #eeeff1;}
+.copyright {margin-top:5px; font-size:.8125rem; color:#18191b; opacity:.5;}
+.copyrightWrap .follow {position:absolute; right:30px; top:50%; margin-top:-15px;}
+.copyrightWrap .facebook {position:relative; float:left; height:28px; margin:1px 12px 0 0; padding:5px 42px 5px 10px; font-weight:300; font-size:.875rem; line-height:18px; border-right:1px solid #eeeff1;}
+.copyrightWrap .facebook:after {content:""; position:absolute; right:10px; top:50%; width:24px; height:24px; margin-top:-12px; background:url("assets/images/ico_facebook.png") no-repeat right center;}
+.copyrightWrap select {height:30px; padding:5px 25px 5px 13px; font-size:.875rem; background:#eff2f5 url("assets/images/select_arrow_family.gif") no-repeat right center; border-radius:4px;}
+
+.btn_top {position:fixed; right:5px; bottom:123px; width:66px; height:67px; text-indent:-999em; background:url("assets/images/btn_top.png") no-repeat center center; z-index:100;}
+
+/*****Body loading*********/
+.loading {position: fixed; left:0; top:0; width:100%; height:100%; font-size:.75rem; color:#fff; text-align:center; background:rgba(0,0,0,.7); z-index:999999;}
+.loading > *:first-child {position:absolute; left:10%; top:50%; width:80%; padding-top:56px; background:url("assets/images/ico_loading.gif") no-repeat center top; -webkit-transform:translateY(-50%); -moz-transform:translateY(-50%); -ms-transform:translateY(-50%); transform:translateY(-50%);}
+.loading strong {display:block; font-size:.875rem;}
+.loading.st02 {color:#000; background:none;}
+.contentsWrap .loading {z-index:150;}
+body > .loading {position:fixed;}
